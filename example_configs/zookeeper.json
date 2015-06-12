@@ -1,0 +1,197 @@
+{
+  "lowercaseOutputName": true,
+  "rules": [
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+), name1=replica.(.+)><>InitLimit",
+      "type": "GAUGE",
+      "name": "zookeeper_$1_InitLimit",
+      "labels": {
+        "quorum_id": "$2",
+        "replica": "$3"
+      }
+    },
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+), name1=replica.(.+), name2=(.+), name3=(.+)><>NodeCount",
+      "type": "COUNTER",
+      "name": "zookeeper_$1_storage_NodeCount",
+      "labels": {
+        "quorum_id": "$2",
+        "replica": "$3",
+        "role": "$4",
+        "storage": "$5"
+      }
+    },
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+), name1=replica.(.+), name2=(.+), name3=(.+)><>WatchCount",
+      "type": "COUNTER",
+      "name": "zookeeper_$1_storage_WatchCount",
+      "labels": {
+        "quorum_id": "$2",
+        "replica": "$3",
+        "role": "$4",
+        "storage": "$5"
+      }
+    },
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+), name1=replica.(.+)><>MaxClientCnxnsPerHost",
+      "type": "GAUGE",
+      "name": "zookeeper_$1_MaxClientCnxnsPerHost",
+      "labels": {
+        "quorum_id": "$2",
+        "replica": "$3"
+      }
+    },
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+), name1=replica.(.+)><>SyncLimit",
+      "type": "GAUGE",
+      "name": "zookeeper_$1_SyncLimit",
+      "labels": {
+        "quorum_id": "$2",
+        "replica": "$3"
+      }
+    },
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+), name1=replica.(.+)><>MinSessionTimeout",
+      "type": "GAUGE",
+      "name": "zookeeper_$1_MinSessionTimeout",
+      "labels": {
+        "quorum_id": "$2",
+        "replica": "$3"
+      }
+    },
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+), name1=replica.(.+)><>MaxSessionTimeout",
+      "type": "GAUGE",
+      "name": "zookeeper_$1_MaxSessionTimeout",
+      "labels": {
+        "quorum_id": "$2",
+        "replica": "$3"
+      }
+    },
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+), name1=replica.(.+)><>ElectionType",
+      "type": "GAUGE",
+      "name": "zookeeper_$1_ElectionType",
+      "labels": {
+        "quorum_id": "$2",
+        "replica": "$3"
+      }
+    },
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+)><>QuorumSize",
+      "type": "GAUGE",
+      "name": "zookeeper_$1_QuorumSize",
+      "labels": {
+        "quorum_id": "$2"
+      }
+    },
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+), name1=replica.(.+), name2=(.+)><>PendingRevalidationCount",
+      "type": "COUNTER",
+      "name": "zookeeper_$1_PendingRevalidationCount",
+      "labels": {
+        "quorum_id": "$2",
+        "replica": "$3",
+        "role": "$4"
+      }
+    },
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+), name1=replica.(.+)><>TickTime",
+      "type": "GAUGE",
+      "name": "zookeeper_$1_TickTime",
+      "labels": {
+        "quorum_id": "$2",
+        "replica": "$3"
+      }
+    },
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+), name1=replica.(.+), name2=(.+)><>NumAliveConnections",
+      "type": "GAUGE",
+      "name": "zookeeper_$1_NumAliveConnections",
+      "labels": {
+        "quorum_id": "$2",
+        "replica": "$3",
+        "role": "$4"
+      }
+    },
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+), name1=replica.(.+), name2=(.+)><>OutstandingRequests",
+      "type": "GAUGE",
+      "name": "zookeeper_$1_OutstandingRequests",
+      "labels": {
+        "quorum_id": "$2",
+        "replica": "$3",
+        "role": "$4"
+      }
+    },
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+), name1=replica.(.+), name2=(.+)><>PacketsSent",
+      "type": "COUNTER",
+      "name": "zookeeper_$1_PacketsSent",
+      "labels": {
+        "quorum_id": "$2",
+        "replica": "$3",
+        "role": "$4"
+      }
+    },
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+), name1=replica.(.+), name2=(.+)><>PacketsReceived",
+      "type": "COUNTER",
+      "name": "zookeeper_$1_PacketsReceived",
+      "labels": {
+        "quorum_id": "$2",
+        "replica": "$3",
+        "role": "$4"
+      }
+    },
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+), name1=replica.(.+)><>Tick",
+      "type": "COUNTER",
+      "name": "zookeeper_$1_Tick",
+      "labels": {
+        "quorum_id": "$2",
+        "replica": "$3"
+      }
+    },
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+), name1=replica.(.+), name2=(.+)><>MinRequestLatency",
+      "type": "GAUGE",
+      "name": "zookeeper_$1_MinRequestLatency",
+      "labels": {
+        "quorum_id": "$2",
+        "replica": "$3",
+        "role": "$4"
+      }
+    },
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+), name1=replica.(.+), name2=(.+)><>AvgRequestLatency",
+      "type": "GAUGE",
+      "name": "zookeeper_$1_AvgRequestLatency",
+      "labels": {
+        "quorum_id": "$2",
+        "replica": "$3",
+        "role": "$4"
+      }
+    },
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+), name1=replica.(.+), name2=(.+)><>MaxRequestLatency",
+      "type": "GAUGE",
+      "name": "zookeeper_$1_MaxRequestLatency",
+      "labels": {
+        "quorum_id": "$2",
+        "replica": "$3",
+        "role": "$4"
+      }
+    },
+    {
+      "pattern": "org.apache.ZooKeeperService<name0=(.+)_id(.+), name1=replica.(.+), name2=(.+)><>(.+)",
+      "type": "COUNTER",
+      "name": "zookeeper_$1_$5",
+      "labels": {
+        "quorum_id": "$2",
+        "replica": "$3",
+        "role": "$4"
+      }
+    },
+  ]
+}
